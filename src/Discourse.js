@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-class Home extends Component {
+class Discourse extends Component {
   render() {
     const { isAuthenticated, login } = this.props.auth;
     return (
       <div>
-        <h1>Home</h1>
+        <h1>Discourse</h1>
         {isAuthenticated() ? (
           <Link to="/profile">View profile</Link>
         ) : (
@@ -17,4 +17,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Discourse;

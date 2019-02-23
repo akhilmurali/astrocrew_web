@@ -8,34 +8,26 @@ class Nav extends Component {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">Discourse</Link>
           </li>
           <li>
-            <Link to="/profile">Profile</Link>
+            <Link to="/profile">People</Link>
           </li>
           <li>
-            <Link to="/public">Public</Link>
+            <Link to="/public">Projects</Link>
           </li>
-          {isAuthenticated() && (
+          <li>
+            <Link to="/private">Startups</Link>
+          </li>
             <li>
-              <Link to="/private">Private</Link>
+              <Link to="/pro">Astro School</Link>
             </li>
-          )},
-          {isAuthenticated() && (
             <li>
-              <Link to="/pro">Pro</Link>
+              <Link to="/moderator">Events</Link>
             </li>
-          )},
-          {isAuthenticated() && (
-            <li>
-              <Link to="/moderator">Moderator</Link>
-            </li>
-          )},
-          {isAuthenticated() && (
             <li>
               <Link to="/admin">Admin</Link>
             </li>
-          )}
           <li>
             <button onClick={isAuthenticated() ? logout : login}>
               {isAuthenticated() ? "Log Out" : "Log In"}

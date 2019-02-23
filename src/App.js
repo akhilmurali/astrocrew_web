@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import { Route, Redirect } from "react-router-dom";
-import Home from "./Home";
-import Profile from "./Profile";
+import Discourse from "./Discourse";
+import People from "./People";
 import Nav from "./Nav";
 import Auth from "./Auth/Auth";
 import Callback from "./Callback";
-import Public from "./Public";
-import Private from "./Private";
-import Pro from "./Pro";
-import Moderator from "./Moderator";
+import Projects from "./Projects";
+import Startups from "./Startups";
+import School from "./School";
+import Events from "./Events";
 import Admin from "./Admin";
 
 class App extends Component {
@@ -24,7 +24,7 @@ class App extends Component {
           <Route
             path="/"
             exact
-            render={props => <Home auth={this.auth} {...props} />}
+            render={props => <Discourse auth={this.auth} {...props} />}
           />
           <Route
             path="/callback"
@@ -34,18 +34,18 @@ class App extends Component {
             path="/profile"
             render={props =>
               this.auth.isAuthenticated() ? (
-                <Profile auth={this.auth} {...props} />
+                <People auth={this.auth} {...props} />
               ) : (
                 <Redirect to="/" />
               )
             }
           />
-          <Route path="/public" component={Public} />
+          <Route path="/public" component={Projects} />
           <Route
             path="/private"
             render={props =>
               this.auth.isAuthenticated() ? (
-                <Private auth={this.auth} {...props} />
+                <Startups auth={this.auth} {...props} />
               ) : (
                 this.auth.login()
               )
@@ -55,7 +55,7 @@ class App extends Component {
             path="/pro"
             render={props =>
               this.auth.isAuthenticated() ? (
-                <Pro auth={this.auth} {...props} />
+                <School auth={this.auth} {...props} />
               ) : (
                 this.auth.login()
               )
@@ -65,7 +65,7 @@ class App extends Component {
             path="/moderator"
             render={props =>
               this.auth.isAuthenticated() ? (
-                <Moderator auth={this.auth} {...props} />
+                <Events auth={this.auth} {...props} />
               ) : (
                 this.auth.login()
               )

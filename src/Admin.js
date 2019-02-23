@@ -6,7 +6,6 @@ class Admin extends Component {
   };
 
   componentDidMount() {
-      console.log('Entered admin route');
     fetch("/admin", {
         headers: { Authorization: `Bearer ${this.props.auth.getAccessToken()}` }
       })

@@ -1,14 +1,12 @@
 import React, { Component } from "react";
 
-class Moderator extends Component {
+class Projects extends Component {
   state = {
     message: ""
   };
 
   componentDidMount() {
-    fetch("/moderator", {
-        headers: { Authorization: `Bearer ${this.props.auth.getAccessToken()}` }
-      })
+    fetch("/public")
       .then(response => {
         if (response.ok) return response.json();
         throw new Error("Network response was not ok.");
@@ -22,4 +20,4 @@ class Moderator extends Component {
   }
 }
 
-export default Moderator;
+export default Projects;

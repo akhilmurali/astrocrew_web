@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Profile extends Component {
+class People extends Component {
   state = {
     profile: null,
     error: ""
@@ -34,4 +34,4 @@ class Profile extends Component {
   }
 }
 
-export default Profile;
+export default People;

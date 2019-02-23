@@ -1,12 +1,16 @@
 import React, { Component } from "react";
 
-class Public extends Component {
+class Events extends Component {
   state = {
     message: ""
   };
 
   componentDidMount() {
-    fetch("/public")
+    fetch(`/moderator?id_token=${this.props.auth.getIdToken()}`, {
+        headers: { Authorization: `Bearer ${this.props.auth.getAccessToken()}` ,
+        id_token: `${this.props.auth.getIdToken()}`
+      }
+      })
       .then(response => {
         if (response.ok) return response.json();
         throw new Error("Network response was not ok.");
@@ -20,4 +24,4 @@ class Public extends Component {
   }
 }
 
-export default Public;
+export default Events;
