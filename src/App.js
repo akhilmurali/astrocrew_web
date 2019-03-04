@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Route, Redirect } from "react-router-dom";
-import Discourse from "./Discourse";
+import Commune from "./Commune";
 import People from "./People";
 import Nav from "./Nav";
 import Auth from "./Auth/Auth";
@@ -24,7 +24,7 @@ class App extends Component {
           <Route
             path="/"
             exact
-            render={props => <Discourse auth={this.auth} {...props} />}
+            render={props => <Commune auth={this.auth} {...props} />}
           />
           <Route
             path="/callback"

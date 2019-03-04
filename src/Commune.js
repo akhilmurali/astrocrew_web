@@ -1,24 +1,25 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Footer from './Footer';
+import Welcome from './Welcome';
 
-class Discourse extends Component {
+class Commune extends Component {
   render() {
     const { isAuthenticated, login, logout } = this.props.auth;
     return (
       <div>
-        <h1>Discourse</h1>
-        {isAuthenticated() ? (
-          <Link to="/profile">View profile</Link>
+        {!isAuthenticated() ? (
+          <Welcome auth={this.props.auth}/>
         ) : false}
         <p>
           <button onClick={isAuthenticated() ? logout : login} style={{marginTop: 10}}>
             {isAuthenticated() ? "Log Out" : "Log In"}
           </button>
         </p>
-
+        <Footer></Footer>
       </div>
     );
   }
 }
 
-export default Discourse;
+export default Commune;

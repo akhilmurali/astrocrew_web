@@ -16,7 +16,6 @@ class Admin extends Component {
       .then(response => this.setState({ message: response.message }))
       .catch(error => this.setState({ message: error.message }));
   }
-
   render() {
     return <p>{this.state.message}</p>;
   }

@@ -60,3 +60,13 @@ nav button {
 .logo{
   float: left; /*Floats right or left relative to the parent which is nav*/
 }
+
+div.metaLinks>ul>li{
+  list-style-type: none;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  float: left;  
+  text-decoration: none;
+  text-transform: uppercase;
+}
