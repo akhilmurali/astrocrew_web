@@ -63,10 +63,9 @@ nav button {
 
 div.metaLinks>ul>li{
   list-style-type: none;
-  overflow: hidden;
   display: flex;
   justify-content: flex-end;
-  float: left;  
+  float: left;
   text-decoration: none;
   text-transform: uppercase;
 }

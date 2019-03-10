@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import { Input, Form } from "antd";
-import { Button } from "antd";
-import { Icon } from 'antd';
 import "antd/dist/antd.css";
-import { browserHistory } from 'react-router';
-import { timingSafeEqual } from "crypto";
+import {Button} from "antd";
+import { from } from "rxjs";
 
 const Search = Input.Search;
 
@@ -84,22 +82,60 @@ class School extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Just a Few more things, mate.</h1>
-        <Form.Item
-          validateStatus={this.state.status}
-          hasFeedback
-          style={{maxWidth:400}}
-          >
-          <Input value={this.state.inputValue} id={this.state.status}
-            onChange={this.updateInputValue} />
-        </Form.Item>
-        <a onClick={this.checkUserNameAvailability} style={{ padding: 0, marginTop: -20 }}>Check Availability</a>
-        <br />
-        <Button type="primary" style={{ marginTop: 10 }} onClick={this.submitUsername}
-          disabled={!this.state.userNameAvailable}>
-          Submit
-        </Button>
+      <div style={{maxWidth:800, marginLeft: 100}} >
+       <h1>Just a Few more things, mate.</h1>
+  <Form.Item
+    validateStatus={this.state.status}
+    hasFeedback
+    style={{ maxWidth: 400 }}
+    label="Create a unique username"
+  >
+    <Input value={this.state.inputValue} id={this.state.status}
+      onChange={this.updateInputValue} />
+  </Form.Item>
+  <a onClick={this.checkUserNameAvailability} style={{ padding: 0, marginTop: -20 }}>Check Availability</a>
+  <br />
+  <h3 style={{ marginTop: 20 }}><b>optional</b></h3>
+  <h2>Become a verified user <i class="far fa-check-circle"></i><br></br>
+    and upgrade your posting permissions</h2>
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    It has survived not only five centuries, but also the leap into electronic typesetting,
+  remaining essentially unchanged.</p>
+  <p>It has survived not only five centuries, but also the leap into electronic typesetting,
+  remaining essentially unchanged.</p>
+  <Form.Item
+    validateStatus={this.state.status}
+    hasFeedback
+    style={{ maxWidth: 400 }}
+    label="Enter Verified username"
+  >
+    <Input value={this.state.inputValue} id={this.state.status}
+      onChange={this.updateInputValue} />
+  </Form.Item>
+  <Form.Item
+    validateStatus={this.state.status}
+    hasFeedback
+    style={{ maxWidth: 400 }}
+    label="Enter Your social account link"
+  >
+    <Input value={this.state.inputValue} id={this.state.status}
+      onChange={this.updateInputValue} />
+  </Form.Item>
+  <Form.Item
+    validateStatus={this.state.status}
+    hasFeedback
+    style={{ maxWidth: 400 }}
+    label="Write a personalized note"
+  >
+    <Input value={this.state.inputValue} id={this.state.status}
+      onChange={this.updateInputValue} />
+  </Form.Item>
+  <Button type="primary" style={{ marginTop: 10, float: "right", width: 200, marginBottom: 40 }} onClick={this.submitUsername}
+    disabled={!this.state.userNameAvailable}>
+    Submit
+</Button>
       </div>
     );
   }

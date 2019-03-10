@@ -15,14 +15,14 @@ const content = (
 class Footer extends React.Component {
     render() {
         return (
-            <div style={{margin:"auto"}}>
-                <div style={{ position: "absolute", bottom: 10, textAlign: "center" }}>
+            <div >
+                <div style={{ textAlign: "center" }}>
                     <div>
                         <Popover content={content}>
                             <Button type="primary">Menu</Button>
                         </Popover>
                     </div>
-                    <div className="metaLinks" >
+                    <div className="metaLinks">
                         <ul>
                             <li style={{ margin: 5 }}>About</li>
                             <li style={{ margin: 5 }}>Guidelines</li>
