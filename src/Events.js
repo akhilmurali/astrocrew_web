@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import StoryFullView from "./StoryFullView";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 class Events extends Component {
   state = {
@@ -7,10 +9,11 @@ class Events extends Component {
 
   componentDidMount() {
     fetch(`/moderator?id_token=${this.props.auth.getIdToken()}`, {
-        headers: { Authorization: `Bearer ${this.props.auth.getAccessToken()}` ,
+      headers: {
+        Authorization: `Bearer ${this.props.auth.getAccessToken()}`,
         id_token: `${this.props.auth.getIdToken()}`
       }
-      })
+    })
       .then(response => {
         if (response.ok) return response.json();
         throw new Error("Network response was not ok.");
@@ -20,7 +23,10 @@ class Events extends Component {
   }
 
   render() {
-    return <p>{this.state.message}</p>;
+    return (<div>
+      <p>{this.state.message}</p>
+      <StoryFullView/>
+    </div>);
   }
 }
 

@@ -69,3 +69,7 @@ div.metaLinks>ul>li{
   text-decoration: none;
   text-transform: uppercase;
 }
+
+div.antd-modal{
+  width: 800px!important
+}

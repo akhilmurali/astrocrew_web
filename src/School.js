@@ -3,6 +3,7 @@ import { Input, Form } from "antd";
 import "antd/dist/antd.css";
 import {Button} from "antd";
 import { from } from "rxjs";
+import TextArea from "antd/lib/input/TextArea";
 
 const Search = Input.Search;
 
@@ -129,8 +130,7 @@ class School extends Component {
     style={{ maxWidth: 400 }}
     label="Write a personalized note"
   >
-    <Input value={this.state.inputValue} id={this.state.status}
-      onChange={this.updateInputValue} />
+    <TextArea style={{height: 100}}/>
   </Form.Item>
   <Button type="primary" style={{ marginTop: 10, float: "right", width: 200, marginBottom: 40 }} onClick={this.submitUsername}
     disabled={!this.state.userNameAvailable}>
