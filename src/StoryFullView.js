@@ -6,6 +6,7 @@ import TextArea from "antd/lib/input/TextArea";
 
 class StoryFullView extends React.Component {
     render() {
+        //Remove this once wired with backend database:
         var nested =
             [{ id: 1, msg: "Comment content1", comments: [{ id: 21, msg: "nested 1 c 1", parentId: 1, comments: [{id: 1, msg: "Sub Sub commenr", parentId: 21}] }, { id: 31, msg: "nested 1 c 2", parentId: 1 }] },
             { id: 2, msg: "Comment content 2", comments: [{ id: 23, msg: "nested 2 c 1", parentId: 2 }, { id: 45, msg: "nested 2 c 2", parentId: 2 }] },
@@ -60,7 +61,7 @@ class StoryFullView extends React.Component {
                                 <TextArea style={{ height: 200 }}></TextArea>
                                 <Button type="primary" style={{
                                     marginTop: 10, borderRadius: 0, width: 150,
-                                    backgroundColor: "#361450", borderColor: "#361450", float: "right"
+                                    backgroundColor: "#361450", borderColor: "#361450", float: "right", marginBottom: 40
                                 }}>Add Comment</Button>
                                 {nested.map(comment =>{
                                     return <UnitComment comment={comment} />
