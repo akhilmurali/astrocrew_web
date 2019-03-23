@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Spin} from "antd";
 
 class Callback extends Component {
   componentDidMount = () => {
@@ -10,7 +11,7 @@ class Callback extends Component {
     }
   };
   render() {
-    return <h1>Loading...</h1>;
+    return <Spin size="large" style={{display: "block", margin: 'auto', position: "absolute", top: "50%", left: "50%"}}/>;
   }
 }
 

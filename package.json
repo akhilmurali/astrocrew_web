@@ -19,7 +19,8 @@
     "react-dom": "^16.5.2",
     "react-router": "3",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.0.4"
+    "react-scripts": "2.0.4",
+    "webfontloader": "^1.6.28"
   },
   "scripts": {
     "start": "yarn start:client",

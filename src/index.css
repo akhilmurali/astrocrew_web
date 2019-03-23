@@ -1,11 +1,12 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Rubik, sans-serif;
 }
 
 .body {
   margin: 15px;
+  font-family: Rubik
 }
 
 h1,
@@ -24,7 +25,6 @@ ul.unstyled {
   padding: 0;
 }
 
-
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -32,7 +32,7 @@ nav ul {
   overflow: hidden;
   display: flex;
   justify-content: flex-end;
-  background-image: linear-gradient(to bottom right, #f0582a, #eb0685);
+  background-image: linear-gradient(to bottom right, #ffffff, #ffffff);
 }
 
 nav li {
@@ -42,17 +42,20 @@ nav li {
 
 nav li a {
   display: block;
-  color: white;
+  color: #1E1E1E;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  text-transform: uppercase
+  text-transform: uppercase;
+  font-family: Rubik;
+  letter-spacing: 2px;
 }
 
 nav li a:hover {
-  background-color: #d9390d;
+  background-color: #ffffff;
+  color: #000000;
+  text-decoration: underline;
 }
-
 nav button {
   margin-top: 13px;
 }
@@ -71,5 +74,30 @@ div.metaLinks>ul>li{
 }
 
 div.antd-modal{
+  width: 800px!important
+}
+
+.welcome-header{
+  font-family: Rubik;
+  letter-spacing: 2px;
+  font-weight: 200;
+}
+
+a.footer-link{
+  text-transform: "uppercase";
+  padding: 15;
+  color: #1E1E1E;
+  font-family: 'Rubik';
+  letter-spacing:2;
+}
+
+/* Used to force color in tab view */
+.ant-tabs-nav .ant-tabs-tab-active {
+  color: #1E1E1E!important;
+  font-weight: 100!important;
+}
+
+/* Used to force modal wider */
+.ant-modal{
   width: 800px!important
 }

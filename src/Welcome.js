@@ -10,12 +10,12 @@ class Welcome extends Component {
     render() {
         const {login} = this.props.auth;
         return (<div style={{marginTop: 100, marginLeft: 50}}>
-            <h1>
-                {this.state.mission}
-            </h1>
-            <div>
-                <Button onClick={login}  type="primary" style={{width: 140, backgroundColor: "red", borderColor: "red", color: "white"}}>JOIN</Button>
-                <Button onClick={login} style={{marginLeft: 10, width: 100, borderColor: "red", borderWidth: 2}}>SIGN IN</Button>
+            <h2 className="welcome-header">
+            We are an open Community on a mission<br></br> to make humans, an interplanetary species.
+            </h2>
+            <div style={{marginTop: 30}}>
+                <Button onClick={login}  type="primary" style={{width: 180, fontFamily: 'Rubik', backgroundColor: "#361450", borderColor: "#361450", color: "white"}}>JOIN</Button>
+                <Button onClick={login} style={{marginLeft: 10, width: 140, fontFamily: 'Rubik',borderColor: "#361450", borderWidth: 2}}>SIGN IN</Button>
             </div>
         </div>);
     }

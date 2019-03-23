@@ -4,7 +4,13 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
+import WebFont from 'webfontloader';
 
+WebFont.load({
+  google: {
+    families: ['Rubik:100,200,300,400,500,600,700']
+  }
+});
 ReactDOM.render(
   <Router>
     <Route component={App} />

@@ -5,12 +5,12 @@ import './index.css';
 import moment from "moment";
 
 class Nav extends Component {
-  
+
   render() {
     return (
-      <nav>
-          <img className="col" className="logo" src="/assets/astro.png" style={{width: 150, marginLeft: 20}} />
-          <ul className="col">           
+      <nav className="container">
+          <img className="logo" src="/assets/astro.png" style={{ width: 150, marginLeft: 20 }} />
+          <ul>
             <li>
               <Link to="/">Discourse</Link>
             </li>
@@ -30,7 +30,7 @@ class Nav extends Component {
               <Link to="/moderator">Events</Link>
             </li>
             <li>
-              <img src="/assets/user.svg" style={{width: 35, height: 35, textAlign: "center", marginTop: 5, marginRight: 5}}/>
+              <img src="/assets/user.svg" style={{ width: 35, height: 35, textAlign: "center", marginTop: 5, marginRight: 5 }} />
             </li>
           </ul>
       </nav>

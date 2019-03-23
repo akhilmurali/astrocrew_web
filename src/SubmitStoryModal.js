@@ -1,13 +1,14 @@
 import React from "react";
 import { Modal, Form, Input, Button, Radio } from "antd";
 import TextArea from "antd/lib/input/TextArea";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 class SubmitStoryModal extends React.Component {
 
   constructor(props) {
     super(props);
   }
-  
+
   state = { visible: false };
 
   state = {
@@ -44,7 +45,7 @@ class SubmitStoryModal extends React.Component {
   onChange(e) {
     console.log(`radio checked:${e.target.value}`);
   }
- //Adjust the length of the modal by somehow manipulating div.antd-modal
+  //Adjust the length of the modal by somehow manipulating div.antd-modal
   render() {
     const { visible, confirmLoading, ModalText } = this.state;
     const RadioButton = Radio.Button;
@@ -55,34 +56,43 @@ class SubmitStoryModal extends React.Component {
         visible={visible}
         onOk={this.handleOk.bind(this)}
         confirmLoading={confirmLoading}
-        onCancel={this.handleCancel.bind(this)} >
-        <div>
-          <Form.Item label="Title">
-            <Input />
-          </Form.Item>
-          <Form.Item label="Description">
-            <TextArea />
-          </Form.Item>
-        </div>
-        <div>
-          <Form.Item label="Link">
-            <Input />
-          </Form.Item>
-          <Form.Item label="Alternate Link">
-            <Input />
-          </Form.Item>
-          <h4>Tags</h4>
-          <div>
-            <RadioGroup onChange={this.onChange} defaultValue="a">
-              <RadioButton value="b" style={{ margin: 5 }}>Blog Post</RadioButton>
-              <RadioButton value="a" style={{ margin: 5 }}>News Article</RadioButton>
-              <RadioButton value="c" style={{ margin: 5 }}>Press Release</RadioButton>
-              <RadioButton value="d" style={{ margin: 5 }}>Research Paper</RadioButton>
-              <RadioButton value="e" style={{ margin: 5 }}>Ask Crew</RadioButton>
-              <RadioButton value="f" style={{ margin: 5 }}>Show Crew</RadioButton>
-            </RadioGroup>
+        onCancel={this.handleCancel.bind(this)}
+        footer={[
+        ]}>
+        <div className="row">
+          <div className="col">
+            <h6>Title</h6>
+            <Form.Item>
+              <Input />
+            </Form.Item>
+            <h6>Description</h6>
+            <Form.Item>
+              <TextArea style={{height: 170}}/>
+            </Form.Item>
+            <Button style={{borderRadius: 0, backgroundColor: "#361450", color: "#ffffff"}}>SUBMIT</Button>
           </div>
-        </div>
+          <div className="col">
+            <h6>Link</h6>
+            <Form.Item>
+              <Input />
+            </Form.Item>
+            <h6>Alternate Link</h6>
+            <Form.Item>
+              <Input />
+            </Form.Item>
+            <h6>Tags</h6>
+            <div>
+              <RadioGroup onChange={this.onChange} defaultValue="a">
+                <RadioButton value="a" style={{ margin: 5, fontFamily: "Rubik" }}>Blog Post</RadioButton>
+                <RadioButton value="b" style={{ margin: 5, fontFamily: "Rubik" }}>News Article</RadioButton>
+                <RadioButton value="c" style={{ margin: 5, fontFamily: "Rubik" }}>Press Release</RadioButton>
+                <RadioButton value="d" style={{ margin: 5, fontFamily: "Rubik" }}>Research Paper</RadioButton>
+                <RadioButton value="e" style={{ margin: 5, fontFamily: "Rubik" }}>Ask Crew</RadioButton>
+                <RadioButton value="f" style={{ margin: 5, fontFamily: "Rubik" }}>Show Crew</RadioButton>
+              </RadioGroup>
+            </div>
+          </div>
+        </div>     
       </Modal>
     </div>);
   }
