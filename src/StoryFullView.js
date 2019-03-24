@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon, Button, Comment, Tooltip, List, Avatar } from "antd";
+import { Icon, Button, Comment, Avatar } from "antd";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import TextArea from "antd/lib/input/TextArea";

@@ -23,8 +23,7 @@ class Discourse extends Component {
       </p> */}
       <div className="container" style={{marginTop: 150}}>
         <TabbedView invokeModal={this.invokeModal.bind(this)} auth={this.props.auth}></TabbedView>
-        <SubmitStoryModal ref="child"></SubmitStoryModal> 
-        <Button style={{borderRadius: 0, display: "block", margin: "auto", color: "#ffffff", backgroundColor: "#361450", fontFamily: "Rubik", letterSpacing: 1}}>Load More Stories</Button>
+        <SubmitStoryModal ref="child"></SubmitStoryModal>
         <Footer></Footer>
       </div>
     </div>
